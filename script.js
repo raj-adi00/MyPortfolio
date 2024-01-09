@@ -100,6 +100,18 @@ window.addEventListener('scroll', function () {
             var width = document.getElementById('skills');
             document.getElementsByClassName("level")[i].style.width = highlight[i] + "%";
             // document.getElementsByClassName("level")[i].style.width = highlight[i] / 100 * (width);
+
+            // var shake=this.document.querySelectorAll(".pride");
+            // shake.classList.add('shaky');
         }
     }
 });
+
+// window.addEventListener('scroll',()=>{
+//     var windowheight = window.innerHeight;
+//     var standard = 10;
+//     if (inner < windowheight - standard){
+//         var shake=this.document.querySelectorAll(".pride");
+//          shake[0].classList.add('shaky');
+//     }
+// });
