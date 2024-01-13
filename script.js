@@ -1,15 +1,41 @@
-window.addEventListener('scroll', reveal);
-function reveal() {
-    var reveals = document.querySelectorAll('.reveal');
-    for (var i = 0; i < reveals.length; i++) {
-        var windowheight = window.innerHeight;
-        var revealtop = reveals[i].getBoundingClientRect().top;
-        var revealpoint = 11;
-        if (revealtop < windowheight - revealpoint) {
-            reveals[i].classList.add('active');
+if(window.innerWidth>1300)
+{
+    window.addEventListener('scroll', reveal);
+    function reveal() {
+        var reveals = document.querySelectorAll('.reveal');
+        for (var i = 0; i < reveals.length; i++) {
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+           if(window.innerWidth>1300)
+            var revealpoint = 9;
+        else
+        var revealpoint=0;
+            if (revealtop < windowheight - revealpoint) {
+                reveals[i].classList.add('active');
+            }
+            else {
+                reveals[i].classList.remove('active');
+            }
         }
-        else {
-            reveals[i].classList.remove('active');
+    }
+}
+else{
+    window.addEventListener('load', reveal);
+    function reveal() {
+        var reveals = document.querySelectorAll('.reveal');
+        for (var i = 0; i < reveals.length; i++) {
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+           if(window.innerWidth>1300)
+            var revealpoint = 9;
+        else
+        var revealpoint=0;
+            if (revealtop < windowheight - revealpoint) {
+                reveals[i].classList.add('active');
+            }
+            else {
+                reveals[i].classList.remove('active');
+            }
         }
     }
 }
@@ -53,16 +79,12 @@ window.addEventListener('load', function () {
     var character_counter = 0;
     var dir = 0;
     setInterval(() => {
-        // dynamic.innerHTML=Math.random();
         if (line_number > lst.length - 1) {
             line_number = 0;
         }
         let text = lst[line_number];
         if (dir == 0) {
             if (character_counter > text.length - 1) {
-                // character_counter = 0;
-                // line_number++;
-                // dynamic.innerHTML = "";
                 dir = 1;
             } else {
                 dynamic.textContent += text[character_counter];
@@ -99,19 +121,17 @@ window.addEventListener('scroll', function () {
         if (inner < windowheight - standard) {
             var width = document.getElementById('skills');
             document.getElementsByClassName("level")[i].style.width = highlight[i] + "%";
-            // document.getElementsByClassName("level")[i].style.width = highlight[i] / 100 * (width);
-
-            // var shake=this.document.querySelectorAll(".pride");
-            // shake.classList.add('shaky');
         }
     }
 });
 
-// window.addEventListener('scroll',()=>{
-//     var windowheight = window.innerHeight;
-//     var standard = 10;
-//     if (inner < windowheight - standard){
-//         var shake=this.document.querySelectorAll(".pride");
-//          shake[0].classList.add('shaky');
-//     }
-// });
+var navbar = document.querySelectorAll(".nev > li");
+for (let i = 0; i < navbar.length; i++) {
+    navbar[i].addEventListener("click", function () {
+        for (let idx = 0; idx < navbar.length; idx++) {
+            navbar[idx].style.backgroundColor = "white";
+        }
+        navbar[i].style.backgroundColor = "black";
+
+    });
+}

@@ -8,12 +8,16 @@ body {
     background-color: rgb(99, 89, 152);
 }
 
+
 /* NAVIGATION */
 #nav {
     display: flex;
     background-color: white;
     justify-content: right;
     flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
 }
 
 #nav li a {
@@ -21,15 +25,19 @@ body {
     color: rgb(126 129 133);
     font-family: 'Ubuntu', sans-serif;
     font-size: 0.8rem;
+    padding: 20px 10px;
 }
 
 #nav li {
     list-style: none;
     margin: 0.6%;
+    background-color: white;
+    border-radius: 20px;
+    /* background-color: red; */
+    /* background-color: red; */
 }
 
 #nav li a:hover {
-    color: black;
     text-decoration: underline;
     font-family: 'sans-serif';
     font-weight: 600;
@@ -114,7 +122,8 @@ body {
         opacity: 1;
     }
 }
-#cv button{
+
+#cv button {
     position: absolute;
     bottom: 41%;
     border: 2px solid black;
@@ -122,12 +131,14 @@ body {
     height: 30px;
     font-family: 'Kanit';
     font-size: 1rem;
-    padding: 3px;
+    padding: 5px;
     background-color: rgb(50, 6, 6);
     color: white;
     border-radius: 9px;
+    
 }
-#cv button:hover{
+
+#cv button:hover {
     cursor: pointer;
 }
 
@@ -264,54 +275,7 @@ body {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-/*
-.skill-level {
-    width: 100%;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    overflow: hidden;
-    margin: 6px 0;
-}
-/*
-.skill-bar {
-    height: 30px;
-    line-height: 30px;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    font-family: 'Kanit';
-    font-size: 1.4rem;
-}
 
-.beginner {
-    background-color: #474242;
-    width: 90%;
-}
-
-.intermediate {
-    background-color: #474242;
-    width: 90%;
-}
-
-.advanced {
-    background-color: #474242;
-    width: 50%;
-}
-
-.average {
-    background-color: #474242;
-    width: 80%;
-}
-
-.java {
-    background-color: #474242;
-    width: 60%;
-} */
-
-/* .myskill h3 {
-    text-align: center;
-    font-family: 'Kanit';
-} */
 #skils h3 {
     text-align: center;
     font-family: 'Kanit';
@@ -339,25 +303,13 @@ body {
     z-index: 2;
     top: 0;
 }
-#images{
+
+#images {
     display: flex;
     justify-content: space-evenly;
 }
- /* #images img {
 
-    height: 1%;
-    width: 12%;
-    transform: rotate(13deg);
-    transition: all 1s ease;
-    margin: 15px;
-}   */
-
-/* .present img:hover { */
-    /* transform: scale(1.2); */
-/* } */ 
-
-/* ACHIEVEMENTS */
-#victory::before{
+#victory::before {
     content: "";
     background: black;
     position: absolute;
@@ -371,20 +323,14 @@ body {
 #achievements {
     display: flex;
     justify-content: space-around;
-    /* justify-content: space-between; */
-    /* margin-top: 5px; */
-     /* flex-wrap: wrap; */
-    /* width: 10%;
-    font-family: 'Ubuntu';
-    font-size: 1.4rem;
-    flex-direction: row;
-    align-items: center; */
 }
-.achieve{
+
+.achieve {
     /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); */
     margin: 10px;
 }
-.pride{
+
+.pride {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -396,34 +342,27 @@ body {
     font-weight: 600;
     transition: transform 1s ease;
 }
-/* .achieve {
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 5px;
-    margin: 5px;
-    font-family: 'Ubuntu', sans-serif;
-    box-shadow: 2px 2px black;
-    background-color: white;
-} */
-/* .pride:hover{
-    transform: scale(1.2) skewX(4deg);
-} */
-#academic,#extra{
+
+#academic,
+#extra {
     transition: transform 1s ease;
 }
-#academic:hover{
+
+#academic:hover {
     transform: scale(1.2) skewX(4deg);
 }
-#extra:hover{
+
+#extra:hover {
     transform: scale(1.2) skewX(-4deg);
 }
+
 #victory h3 {
     padding: 5px;
     border: 2px solid black;
     border-radius: 10px;
     font-size: 1.5rem;
     height: 3rem;
-    margin:auto;
+    margin: auto;
     text-align: center;
     width: 15%;
     font-family: 'Kanit';
@@ -436,13 +375,14 @@ body {
 /* CONTACT */
 
 #contact {
-  display: flex;
-  justify-content: space-around;
-  margin: 8% 6%;
-  margin-bottom: 1%;
-  align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 8% 6%;
+    margin-bottom: 1%;
+    align-items: center;
 }
-#contact::before{
+
+#contact::before {
     content: "";
     background: black;
     position: absolute;
@@ -451,64 +391,78 @@ body {
     z-index: -1;
     opacity: 0.3;
 }
+
 /* .connect{
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 } */
-.connect h3{
+.connect h3 {
     font-size: 3rem;
     font-family: 'Ubuntu';
 }
-.account{
+
+.account {
     margin: 12% auto;
 }
-.account img:hover{
+
+.account img:hover {
     transform: scale(1.2);
 }
-.account img{
+
+.account img {
     mix-blend-mode: color-burn;
     margin: 1%;
+    height: 4%;
+    width: 4%;
 }
-.shadow{
+
+.shadow {
     width: 78%;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 40px 40px rgba(0, 0, 0, 0.50); box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    padding:2%  2%;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 40px 40px rgba(0, 0, 0, 0.50);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    padding: 2% 2%;
     border-radius: 23px;
 }
-.connect textarea{
+
+.connect textarea {
     display: inline-block;
     width: 100%;
     height: 30%;
 }
-.user input{
+
+.user input {
     width: 100%;
     border-radius: 23px;
     border: none;
-    height:10%;
+    height: 10%;
 }
 
-.user{
+.user {
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
-.name label{
+
+.name label {
     font-size: 1.5rem;
     font-family: 'Kanit';
 }
-.name{
+
+.name {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    
-} 
-.value{
+
+}
+
+.value {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-   
-} 
-.btn{
+
+}
+
+.btn {
     width: 40%;
     padding: 3px;
     text-align: center;
@@ -519,16 +473,19 @@ body {
     color: white;
     /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 40px 40px rgba(0, 0, 0, 0.50); box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 200px 200px rgba(216, 19, 19, 0.5); */
 }
-.buttons{
+
+.buttons {
     width: 100%;
     margin-top: 7px;
     display: flex;
     justify-content: space-between;
 }
-.btn:hover{
+
+.btn:hover {
     cursor: pointer;
 }
-#footer{
+
+#footer {
     width: 100%;
     height: 1.5rem;
     background-color: black;
@@ -536,4 +493,60 @@ body {
     color: white;
     font-family: 'Kanit';
     padding: 2px;
+}
+
+@media screen and (max-width:1240px) {
+    #cv button {
+        position: relative;
+        top: 83px;
+    }
+
+    #education {
+        margin: 6%;
+    }
+
+    .accordion-title {
+        margin: 1% auto;
+    }
+
+    #victory h3 {
+        width: 17%;
+    }
+
+    .shadow {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1102px) {
+    #victory::before {
+        height: 37%;
+    }
+
+    #victory h3 {
+        width: 19%;
+    }
+
+    .connect {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:1016px) {
+    .name {
+        width: 80%;
+        align-items: baseline;
+    }
+
+    .value {
+        width: 110%;
+    }
+
+    #about::before {
+        height: 41%;
+    }
+    .social-media{
+        height: 4%;
+        width: 4%;
+    }
 }

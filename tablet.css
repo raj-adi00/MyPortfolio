@@ -1,0 +1,24 @@
+#home{
+    margin-bottom: 5%;
+}
+#photo img{
+    height: 30vw;
+}
+.me{
+    height: 1.3rem;
+    line-height: 1rem;
+}
+#intro{
+    /* gap: 1rem; */
+}
+.text{
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+#cv button{
+    line-height: 1rem;
+    width: 100px;
+    height: 25px;
+    font-size: 0.9rem;
+    top: 60px;
+}
