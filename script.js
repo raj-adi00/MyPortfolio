@@ -1,43 +1,42 @@
-if(window.innerWidth>1300)
-{
-    window.addEventListener('scroll', reveal);
-    function reveal() {
+var reveals = document.querySelectorAll('.reveal');
+
+
+reveals[0].classList.add('active');
+if (window.innerWidth > 1300) {
+    window.addEventListener('scroll', revealing);
+    function revealing() {
         var reveals = document.querySelectorAll('.reveal');
         for (var i = 0; i < reveals.length; i++) {
             var windowheight = window.innerHeight;
             var revealtop = reveals[i].getBoundingClientRect().top;
-           if(window.innerWidth>1300)
-            var revealpoint = 9;
-        else
-        var revealpoint=0;
+            if (window.innerWidth > 1300)
+                var revealpoint = 9;
+            else
+                var revealpoint = 0;
             if (revealtop < windowheight - revealpoint) {
                 reveals[i].classList.add('active');
+                // console.log(10);
             }
             else {
                 reveals[i].classList.remove('active');
+                // console.log(11);
             }
+
         }
     }
 }
-else{
+else if (window.innerWidth < 1300) {
     window.addEventListener('load', reveal);
     function reveal() {
-        var reveals = document.querySelectorAll('.reveal');
-        for (var i = 0; i < reveals.length; i++) {
-            var windowheight = window.innerHeight;
-            var revealtop = reveals[i].getBoundingClientRect().top;
-           if(window.innerWidth>1300)
-            var revealpoint = 9;
-        else
-        var revealpoint=0;
-            if (revealtop < windowheight - revealpoint) {
-                reveals[i].classList.add('active');
-            }
-            else {
-                reveals[i].classList.remove('active');
-            }
-        }
+
+        for (let j = 1; j < reveals.length; j++)
+            reveals[j].classList.add("active");
+
     }
+}
+
+else {
+
 }
 
 const accordionitems = document.querySelectorAll('.accordion-item')
@@ -56,7 +55,7 @@ accordionitems.forEach(function (item) {
 window.addEventListener('scroll', levelshow);
 function levelshow() {
     var windowheight = window.innerHeight;
-    var standard = 10;
+    var standard = 1;
     var levels = document.querySelectorAll('.level');
     for (var i = 0; i < levels.length; i++) {
         var element = levels[i];

@@ -1,0 +1,45 @@
+.container span::before {
+    height: 0%;
+}
+
+#photo img {
+    height: 29vw;
+}
+
+.me {
+    font-size: 1.5rem;
+}
+
+.text {
+    font-size: 1.2rem;
+    line-height: 1rem;
+}
+
+.social-media {
+    height: 3%;
+    width: 3%;
+}
+
+#cv {
+    margin-top: -22px;
+}
+
+#about img {
+    height: 16%;
+    width: 16%;
+    margin: 8px 15px;
+}
+
+.about-me {
+    font-size: 0.9rem;
+}
+
+.accordion-title {
+    font-size: 1rem;
+}
+
+.accordion-content {
+    font-size: 0.9rem;
+    padding: 3px;
+    width: 40%;
+}
