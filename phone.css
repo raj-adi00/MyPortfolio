@@ -127,6 +127,9 @@
 .btn {
     width: 45%;
 }
+.skillset{
+    width: 80vw;
+}
 
 @media screen and (max-width:696px) {
     .about-me {
