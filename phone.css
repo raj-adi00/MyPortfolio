@@ -5,10 +5,12 @@
     font-weight: 500;
     display: block;
     border: 2px solid black;
-    /* z-index: 1500; */
+    z-index: 1500;
     position: fixed;
 }
-
+#cv button{
+    display: none;
+}
 #nav {
     flex-direction: column;
     height: 98vh;
@@ -84,8 +86,8 @@
 }
 
 .social-media {
-    height: 3%;
-    width: 3%;
+    height: 5%;
+    width: 5%;
 }
 
 #cv {
