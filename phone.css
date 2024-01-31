@@ -1,3 +1,71 @@
+#menu {
+    color: black;
+    background-color: rgb(176, 176, 185);
+    width: 74px;
+    font-weight: 500;
+    display: block;
+    border: 2px solid black;
+    /* z-index: 1500; */
+    position: fixed;
+}
+
+#nav {
+    flex-direction: column;
+    height: 98vh;
+    display: relative;
+    width: 60vw;
+    margin: 25px 0;
+    /* background-color: blue; */
+    /* transform: translateX(-100%); */
+}
+
+#nav li {
+    padding: 2%;
+    /* background-color: blue; */
+}
+
+#nav li a {
+    font-size: 1.3rem;
+    border-radius: 0;
+}
+
+.line {
+    background-color: rgb(23, 23, 227);
+    width: 50%;
+    height: 2px;
+    border-radius: 20px;
+}
+
+#nav.options {
+    animation: slidein 0.3s 1 ease-in-out;
+}
+
+@keyframes slidein {
+    0% {
+        transform: translateX(-100%);
+        /* opacity: 0; */
+    }
+
+    100% {
+        transform: translateX((0%));
+        /* opacity: 1; */
+    }
+}
+
+#nav:not(.options) {
+    animation: slideout 0.3s 1 ease-in-out forwards;
+}
+
+@keyframes slideout {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 .container span::before {
     height: 0%;
 }
@@ -42,4 +110,43 @@
     font-size: 0.9rem;
     padding: 3px;
     width: 40%;
+}
+
+.title {
+    font-size: 1rem;
+}
+
+#victory h3 {
+    font-size: 1rem;
+}
+
+.pride {
+    font-size: 0.9rem;
+}
+
+.btn {
+    width: 45%;
+}
+
+@media screen and (max-width:696px) {
+    .about-me {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:646px) {
+    #cv button {
+        top: 49px;
+    }
+
+    #victory h3 {
+        border: none;
+        background: none;
+    }
+}
+
+@media screen and (max-width:400px) {
+    #achievement {
+        width: 139%;
+    }
 }

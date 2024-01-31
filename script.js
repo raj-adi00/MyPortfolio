@@ -134,3 +134,18 @@ for (let i = 0; i < navbar.length; i++) {
 
     });
 }
+if (window.innerWidth <= 800) {
+    document.getElementById("menu").innerHTML += " &#9776; MENU"
+    document.getElementById("menu").addEventListener("click", () => {
+        document.getElementById("nav").classList.toggle("options");
+    });
+    document.getElementById("nav").addEventListener("click", () => {
+        document.getElementById("nav").classList.remove("options");
+    });
+    window.addEventListener('load', function () {
+        for (var i = 0; i < know.length; i++) {
+            document.getElementsByClassName("level")[i].style.width = highlight[i] + "%";
+        }
+    });
+};
+
