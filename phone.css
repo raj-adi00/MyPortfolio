@@ -9,7 +9,7 @@
     position: fixed;
 }
 #cv button{
-    display: none;
+    visibility: hidden;
 }
 #nav {
     flex-direction: column;
